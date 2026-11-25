@@ -1,0 +1,62 @@
+{
+  "name": "dsh-plugin-thinking-brain",
+  "version": "0.1.0",
+  "description": "Brain button in the composer that opens an animated thinking-effort slider, segmented by the selected model's own reasoning levels and kept in sync with the built-in model menu control.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": "^0.2.2-rc.5"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "thinking-effort",
+    "reasoning-effort",
+    "composer",
+    "slider"
+  ],
+  "author": "lionwill",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lionwill/dsh-plugin-thinking-brain.git"
+  },
+  "homepage": "https://github.com/lionwill/dsh-plugin-thinking-brain#readme",
+  "bugs": {
+    "url": "https://github.com/lionwill/dsh-plugin-thinking-brain/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-model-selection"
+      ]
+    }
+  }
+}

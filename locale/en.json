@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Thinking effort brain",
+    "description": "Adds a brain button beside the composer's model selector. It opens an animated segmented slider for the current model's reasoning levels; dragging it, clicking a stop, or using the arrow keys changes the session's thinking effort through the same control the model menu uses, and any pick in the model menu moves this slider too. Each model shows its own advertised levels, so a four-level model shows four segments. The card is anchored above the composer and follows the light and dark theme."
+  }
+}

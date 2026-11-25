@@ -1,0 +1,9 @@
+# Bundle patch for dsh-plugin-thinking-brain.
+#
+# The Host half is an inert package: every visible part is the Client module
+# (`lib/client.js`), which registers one seat into `conversation.input.right`.
+# Keeping the row here makes the plugin a normal activation unit in Plugins,
+# so enabling/disabling it composes exactly like every other bundle row.
+- insert:
+    - id: thinking-brain
+      name: dsh-plugin-thinking-brain
